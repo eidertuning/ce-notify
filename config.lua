@@ -6,15 +6,15 @@ Config.DefaultTheme = 'default'
 
 Config.Themes = {
     default = {
-        success = {bg = '#22c55e', color = '#ffffff', icon = '✅'},
-        error = {bg = '#ef4444', color = '#ffffff', icon = '❌'},
-        warning = {bg = '#eab308', color = '#ffffff', icon = '⚠️'},
-        info = {bg = '#3b82f6', color = '#ffffff', icon = 'ℹ️'},
-        announcement = {bg = '#f97316', color = '#ffffff', icon = '📢'},
-        police = {bg = '#1e3a8a', color = '#ffffff', icon = '👮'},
-        ambulance = {bg = '#b91c1c', color = '#ffffff', icon = '🚑'},
-        mechanic = {bg = '#ca8a04', color = '#ffffff', icon = '🔧'},
-        taxi = {bg = '#16a34a', color = '#ffffff', icon = '🚕'}
+        success = {bg = '#22c55e', color = '#ffffff', icon = 'fas fa-check-circle'}, 
+        error = {bg = '#ef4444', color = '#ffffff', icon = 'fas fa-times-circle'}, 
+        warning = {bg = '#eab308', color = '#ffffff', icon = 'fas fa-exclamation-triangle'},
+        info = {bg = '#3b82f6', color = '#ffffff', icon = 'fas fa-info-circle'},
+        announcement = {bg = '#f97316', color = '#ffffff', icon = 'fas fa-bullhorn'},
+        police = {bg = '#1e3a8a', color = '#ffffff', icon = 'fas fa-user-shield'}, 
+        ambulance = {bg = '#b91c1c', color = '#ffffff', icon = 'fas fa-ambulance'},
+        mechanic = {bg = '#ca8a04', color = '#ffffff', icon = 'fas fa-tools'},
+        taxi = {bg = '#16a34a', color = '#ffffff', icon = 'fas fa-taxi'}
     },
     sida = {
         success = {bg = '#ff5050', color = '#ffffff', icon = '✅'},
