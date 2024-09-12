@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+}
+
+.notification-container {
+    position: fixed;
+    width: 300px;
+    max-width: 100%;
+    z-index: 9999;
+}
+
+.notification-container.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.notification {
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.notification-icon {
+    margin-right: 12px;
+    font-size: 24px;
+}
+
+.notification-content {
+    flex-grow: 1;
+}
+
+.notification-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.notification-message {
+    font-size: 14px;
+}
+
+.notification-progress {
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.notification-progress-bar {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: width 10ms linear;
+}
+
+.notification-dismiss {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.config-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.config-menu {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.config-menu-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.config-section {
+    margin-bottom: 20px;
+}
+
+.config-section-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.config-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.config-option label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.config-option select,
+.config-option input[type="number"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.config-option input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.config-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.config-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.config-button.save {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+
+.config-button.save:hover {
+    background-color: #45a049;
+}
+
+.config-button.cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.config-button.cancel:hover {
+    background-color: #da190b;
+}
